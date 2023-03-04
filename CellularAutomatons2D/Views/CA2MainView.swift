@@ -33,42 +33,19 @@ struct CA2MainView: View {
         HSplitView {
             VStack(alignment: .leading) {
                 Text("Row")
-                Picker("", selection: $rowSize) {
-                    ForEach(1...15, id: \.self) {
-                        Text("\($0)")
-                    }
-                }
-                .labelsHidden()
+                CA2Picker(data: $rowSize, upperLimit: 15)
                 .onChange(of: rowSize) { _ in
                     vm.setupSize(row: rowSize, col: colSize)
                 }
                 Text("Column")
-                Picker("", selection: $colSize) {
-                    ForEach(1...20, id: \.self) {
-                        Text("\($0)")
-                    }
-                }
-                .labelsHidden()
+                CA2Picker(data: $colSize, upperLimit: 20)
                 .onChange(of: colSize) { _ in
                     vm.setupSize(row: rowSize, col: colSize)
                 }
                 HStack {
-                    Button("Start") {
-                        if !isPaused {
-                            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
-                                vm.evolve()
-                            }
-                            isPaused = true
-                        }
-                    }
-                    Button("Stop") {
-                        isPaused = false
-                        timer?.invalidate()
-                    }
-                    Button("Reset") {
-                        timer = nil
-                        vm.reset()
-                    }
+                    startButton
+                    stopButton
+                    resetButton
                 }.padding(.top)
             }
             .padding()
@@ -77,9 +54,7 @@ struct CA2MainView: View {
                 ForEach(vm.cellularPlane.indices, id: \.self) { i in
                     HStack {
                         ForEach(vm.cellularPlane[i].indices, id: \.self) { j in
-                            Rectangle()
-                                .frame(width: 50, height: 50)
-                                .foregroundColor((vm.cellularPlane[i][j].state == 1) ? .black : .white)
+                            CA2CellView(state: vm.cellularPlane[i][j].state)
                                 .onTapGesture {
                                     vm.cellularPlane[i][j].toggle()
                                 }
@@ -96,5 +71,32 @@ struct CA2MainView: View {
 struct CA2MainView_Previews: PreviewProvider {
     static var previews: some View {
         CA2MainView()
+    }
+}
+
+extension CA2MainView {
+    private var startButton: some View {
+        Button("Start") {
+            if !isPaused {
+                timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
+                    vm.evolve()
+                }
+                isPaused = true
+            }
+        }
+    }
+    
+    private var stopButton: some View {
+        Button("Stop") {
+            isPaused = false
+            timer?.invalidate()
+        }
+    }
+    
+    private var resetButton: some View {
+        Button("Reset") {
+            timer = nil
+            vm.reset()
+        }
     }
 }
