@@ -51,6 +51,10 @@ struct CA2MainView: View {
             .padding()
             .frame(minWidth: 300, maxWidth: 300, maxHeight: .infinity)
             VStack {
+                Text("Generation № \(vm.generation)")
+                    .bold()
+                    .font(.largeTitle)
+                    .padding()
                 ForEach(vm.cellularPlane.indices, id: \.self) { i in
                     HStack {
                         ForEach(vm.cellularPlane[i].indices, id: \.self) { j in

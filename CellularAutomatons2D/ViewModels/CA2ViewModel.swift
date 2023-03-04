@@ -9,6 +9,8 @@ import Foundation
 
 final class CA2ViewModel: ObservableObject {
     @Published var cellularPlane: [[Cell]] = [[Cell]]()
+    @Published var generation: Int = 0
+    
     private var rows: Int = 15
     private var cols: Int = 15
     
@@ -63,6 +65,7 @@ final class CA2ViewModel: ObservableObject {
         }
         // Assign cellularPlane with the new generation of cells
         cellularPlane = newGenerationPlane
+        generation += 1
     }
     
     private func generateAllNeighbours(i: Int, j: Int) -> [Cell] {
