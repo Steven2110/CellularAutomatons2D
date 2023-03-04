@@ -9,18 +9,17 @@ import SwiftUI
 
 struct CA2MainView: View {
     
-    @State private var cellularPlane: [[Int]] = [
-        [0, 0, 0, 0, 1, 0, 1, 1, 0, 0],
-        [0, 0, 0, 1, 0, 0, 1, 0, 1, 0],
-        [0, 0, 0, 0, 1, 0, 0, 1, 1, 0],
-        [0, 1, 0, 1, 1, 0, 1, 0, 0, 0],
-        [0, 1, 0, 1, 1, 0, 1, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 1, 0, 0, 0, 0, 1, 0],
-        [0, 0, 1, 0, 0, 1, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    @State private var cellularPlane: [[Cell]] = [
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()],
+        [Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell(), Cell()]
     ]
     
     var body: some View {
@@ -42,13 +41,9 @@ struct CA2MainView: View {
                         ForEach(cellularPlane[i].indices, id: \.self) { j in
                             Rectangle()
                                 .frame(width: 50, height: 50)
-                                .foregroundColor((cellularPlane[i][j] == 1) ? .black : .white)
+                                .foregroundColor((cellularPlane[i][j].state == 1) ? .black : .white)
                                 .onTapGesture {
-                                    if (cellularPlane[i][j] == 0) {
-                                        cellularPlane[i][j] = 1
-                                    } else {
-                                        cellularPlane[i][j] = 0
-                                    }
+                                    cellularPlane[i][j].toggle()
                                 }
                         }
                     }

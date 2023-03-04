@@ -14,6 +14,7 @@
 		B0539F8C29B366320031F17A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8B29B366320031F17A /* README.md */; };
 		B0539F8E29B3663B0031F17A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8D29B3663B0031F17A /* .gitignore */; };
 		B0539F9329B367C40031F17A /* CA2MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0539F9229B367C40031F17A /* CA2MainView.swift */; };
+		B0539F9529B36A2D0031F17A /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0539F9429B36A2D0031F17A /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B0539F8B29B366320031F17A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B0539F8D29B3663B0031F17A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B0539F9229B367C40031F17A /* CA2MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CA2MainView.swift; sourceTree = "<group>"; };
+		B0539F9429B36A2D0031F17A /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		B0539F9129B367B10031F17A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0539F9429B36A2D0031F17A /* Cell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0539F7F29B2F2270031F17A /* ContentView.swift in Sources */,
+				B0539F9529B36A2D0031F17A /* Cell.swift in Sources */,
 				B0539F9329B367C40031F17A /* CA2MainView.swift in Sources */,
 				B0539F7D29B2F2270031F17A /* CellularAutomatons2DApp.swift in Sources */,
 			);
