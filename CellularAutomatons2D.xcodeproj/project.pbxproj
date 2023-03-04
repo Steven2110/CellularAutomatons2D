@@ -11,6 +11,8 @@
 		B0539F7F29B2F2270031F17A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0539F7E29B2F2270031F17A /* ContentView.swift */; };
 		B0539F8129B2F2280031F17A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8029B2F2280031F17A /* Assets.xcassets */; };
 		B0539F8429B2F2280031F17A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8329B2F2280031F17A /* Preview Assets.xcassets */; };
+		B0539F8C29B366320031F17A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8B29B366320031F17A /* README.md */; };
+		B0539F8E29B3663B0031F17A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8D29B3663B0031F17A /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		B0539F8029B2F2280031F17A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0539F8329B2F2280031F17A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0539F8529B2F2280031F17A /* CellularAutomatons2D.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CellularAutomatons2D.entitlements; sourceTree = "<group>"; };
+		B0539F8B29B366320031F17A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B0539F8D29B3663B0031F17A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,8 @@
 		B0539F7029B2F2270031F17A = {
 			isa = PBXGroup;
 			children = (
+				B0539F8B29B366320031F17A /* README.md */,
+				B0539F8D29B3663B0031F17A /* .gitignore */,
 				B0539F7B29B2F2270031F17A /* CellularAutomatons2D */,
 				B0539F7A29B2F2270031F17A /* Products */,
 			);
@@ -127,6 +133,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0539F8E29B3663B0031F17A /* .gitignore in Resources */,
+				B0539F8C29B366320031F17A /* README.md in Resources */,
 				B0539F8429B2F2280031F17A /* Preview Assets.xcassets in Resources */,
 				B0539F8129B2F2280031F17A /* Assets.xcassets in Resources */,
 			);
