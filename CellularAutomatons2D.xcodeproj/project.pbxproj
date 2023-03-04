@@ -13,6 +13,7 @@
 		B0539F8429B2F2280031F17A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8329B2F2280031F17A /* Preview Assets.xcassets */; };
 		B0539F8C29B366320031F17A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8B29B366320031F17A /* README.md */; };
 		B0539F8E29B3663B0031F17A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0539F8D29B3663B0031F17A /* .gitignore */; };
+		B0539F9329B367C40031F17A /* CA2MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0539F9229B367C40031F17A /* CA2MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B0539F8529B2F2280031F17A /* CellularAutomatons2D.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CellularAutomatons2D.entitlements; sourceTree = "<group>"; };
 		B0539F8B29B366320031F17A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B0539F8D29B3663B0031F17A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B0539F9229B367C40031F17A /* CA2MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CA2MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,9 @@
 			children = (
 				B0539F7C29B2F2270031F17A /* CellularAutomatons2DApp.swift */,
 				B0539F7E29B2F2270031F17A /* ContentView.swift */,
+				B0539F9129B367B10031F17A /* Models */,
+				B0539F9029B367AC0031F17A /* ViewModels */,
+				B0539F8F29B367A50031F17A /* Views */,
 				B0539F8029B2F2280031F17A /* Assets.xcassets */,
 				B0539F8529B2F2280031F17A /* CellularAutomatons2D.entitlements */,
 				B0539F8229B2F2280031F17A /* Preview Content */,
@@ -73,6 +78,28 @@
 				B0539F8329B2F2280031F17A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B0539F8F29B367A50031F17A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0539F9229B367C40031F17A /* CA2MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0539F9029B367AC0031F17A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B0539F9129B367B10031F17A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0539F7F29B2F2270031F17A /* ContentView.swift in Sources */,
+				B0539F9329B367C40031F17A /* CA2MainView.swift in Sources */,
 				B0539F7D29B2F2270031F17A /* CellularAutomatons2DApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
